@@ -8,11 +8,11 @@
  *
  * @author Adham
  */
-public class Garde {
+public class Grade {
     private double point;
     private boolean passed;
     
-    public Garde (double point){
+    public Grade (double point){
         this.point = point;
         if(point>=50){
             passed = true;
