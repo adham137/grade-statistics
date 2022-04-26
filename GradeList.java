@@ -10,7 +10,7 @@
  */
 import java.util.ArrayList;
 public class GradeList {
-    private ArrayList<Garde> grades;
+    private ArrayList<Grade> grades;
     
     public GradeList(){
         grades = new ArrayList<>();
@@ -18,14 +18,14 @@ public class GradeList {
     
     public void add(double point){
         if(point>=0&&point<=100){
-            grades.add(new Garde(point));
+            grades.add(new Grade(point));
         }
     }
 
     public double average(){
         double sum= 0 ;
         double total = grades.size();
-        for(Garde grade : grades){
+        for(Grade grade : grades){
             sum =sum + grade.getPoint();
         }
         double avg = 1.0*sum/total;
@@ -35,7 +35,7 @@ public class GradeList {
     public double averagePassed(){
         double sum = 0;
         double total = 0;
-        for(Garde grade : grades){
+        for(Grade grade : grades){
             if(grade.isPassed()==true){
                 total++;
                 sum = sum + grade.getPoint();
@@ -49,7 +49,7 @@ public class GradeList {
         int total = grades.size();
         int totalPassed = 0;
         
-        for(Garde grade : grades){
+        for(Grade grade : grades){
             if(grade.isPassed()==true){
                 totalPassed++;
             }
@@ -61,7 +61,7 @@ public class GradeList {
 
     public String toString(){
         int five = 0 , four = 0 , three = 0 , two = 0 , one = 0 , zero = 0; 
-        for(Garde grade : grades){
+        for(Grade grade : grades){
             if(grade.getPoint()>=90){
                 five++;
             }
